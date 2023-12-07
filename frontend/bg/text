@@ -1,0 +1,21 @@
+// // Serve the HTML form
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/home.html');
+// });
+
+// // Handle form submission and store data in MySQL
+// app.post('/submitForm', (req, res) => {
+//   const {employeename,dob,designation,salary,experience_of_department,employee_id,phone_number,address,email} = req.body;
+
+//   const employee = { employeename,dob,designation,salary,experience_of_department,employee_id,phone_number,address, email};
+
+//   connection.query('INSERT INTO employees SET ?', employee, (err, result) => {
+//     if (err) {
+//       console.error('Error inserting data:', err);
+//       res.status(500).send('Error inserting data');
+//       return;
+//     }
+//     console.log('Data inserted successfully:', result);
+//     res.send('Data inserted successfully');
+//   });
+// });
