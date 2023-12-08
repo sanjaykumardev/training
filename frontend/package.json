@@ -1,11 +1,11 @@
 {
   "dependencies": {
+    "@vercel/speed-insights": "^1.0.1",
     "axios": "^1.6.2"
   },
   "name": "frontend",
   "version": "1.0.0",
   "main": "script.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
