@@ -51,6 +51,7 @@ function handleDetails() {
   for (let i = 0; i < cells.length; i++) {
       const cell = newRow.insertCell(i);
       cell.innerHTML = cells[i];
+      cell[i] = [...cell.innerHTML]
   }
 
   // Reset input fields to empty strings
