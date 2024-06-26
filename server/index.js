@@ -3,7 +3,7 @@ const app = express();
 const mysql = require("mysql2");
 const cors = require("cors");
 
-const port = 3000;
+const port = 5000;
 
 // using the nodejs 
 app.use(express.json());
@@ -13,16 +13,16 @@ app.use(cors());
 
 // MySQL Connection
 const connection = mysql.createConnection({
-  host:"bhwk0kuh7dhyearjwvok-mysql.services.clever-cloud.com",
-  user:"ulgf6hscgxrztcuh",
-  password:"ddUyywwNIaBuF3WudbSW",
-  database:"bhwk0kuh7dhyearjwvok"
+  host:"127.0.0.1",
+  user:"root",
+  password:"sanjay007",
+  database:"employeeform"
 });
 
 
 // Endpoint to receive and store employee details
     app.post('/post', (req, res) => {
-      const { employeenmae,dob,designation,salary,experience,employee_id,phone_number,address,email} = req.body;
+      const { employeenmae,dob,designation,salary,experience,employee_id,phone_number,address,email} = req.params;
 
 
   connection.query('INSERT INTO form ( employeenmae, dob, designation, salary,experience,employee_id,phone_number,address, email) VALUES(?,?,?,?,?,?,?,?,?)', [ employeenmae, dob,designation, salary,experience, employee_id,phone_number,address,
